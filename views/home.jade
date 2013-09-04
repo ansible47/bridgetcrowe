@@ -1,0 +1,33 @@
+doctype 5
+html(lang="en")
+	head
+		title= "Bridget Crowe's Website"
+		link(rel='stylesheet', href='/stylesheets/960_16_col.css')
+		link(rel='stylesheet', href='/stylesheets/main.css')
+		link(rel='stylesheet', href='/stylesheets/reset.css')
+		link(rel='stylesheet', href='/stylesheets/text.css')
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		script(src='/javascripts/jquery-1.4.1.js')
+		script(src='/javascripts/scripts.js')
+		script(type='text.javascript').
+			$( "test" ).click(function() {
+			alert( "Handler for .click() called." );
+			});
+	body
+		.container_16
+			block content
+		
+		
+	block content
+	.grid_3.bio.push_1
+			p
+			| bio
+	.grid_3.push_1.gallery
+			p
+			| gallery
+	.grid_3.push_1.contact
+			p
+			| contact
+	.grid_3.push_1.blog
+			p
+			| blog

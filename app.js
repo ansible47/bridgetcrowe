@@ -36,6 +36,36 @@ app.get('/home', function(req, res) {
     });
 });
 
+app.get('/contact', function(req, res) {
+    res.render('contact.jade', { locals: {
+        title: 'Contact'
+    }
+    });
+});
+
+app.get('/projects', function(req, res) {
+    res.render('projects/projects.jade', { locals: {
+        title: 'Projects'
+    }
+    });
+});
+
+app.get('/shop', function(req, res) {
+    res.render('shop.jade', { locals: {
+        title: 'Shop'
+    }
+    });
+});
+
+app.use(function(req, res, next) {
+  if (req.path.split('/')[0] === "downloads")
+    res.attachment(); //short for res.set('Content-Disposition', 'attachment')
+  next();
+});
+
+app.use(express.static(__dirname + '/public'));
+
+
 
 
 http.createServer(app).listen(app.get('port'), function(){

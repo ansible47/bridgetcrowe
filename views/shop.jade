@@ -8,34 +8,32 @@ html(lang="en")
 		link(rel='stylesheet', href='/stylesheets/text.css')
 		script(src='/javascripts/jquery-1.4.1.js')
 		script(src='/javascripts/scripts.js')
+		link(href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css')
 		script.
 			$(document).ready(function(){
 			$("body").css("opacity", "0.1");
 			$("body").fadeTo(1000, 1).show();
 			});
 	.container_16
-		.grid_16
-				.homeimage
-					img(src='/images/homeimage2.jpg', alt='The website of Bridget Crowe' style='position:absolute;margin-left: auto;margin-right: auto')
 		body
 			.grid_12(style="line-height=0px;")
 					a(href="/home")
 						.homeheader shop
 						.homedesc(style="top:3px;") bridget crowe x				
 			.clear
-			.grid_14.push_2
-				.grid_4
-					.project item one
-				.grid_4
-					.project item
-				.grid_4
-					.project item
-			.grid_14.push_2(style="top:16px;")
-				.grid_4
-					.project this is another item
-				.grid_4
-					.project item
-				.grid_4
-					.project buy meh
+			.grid_16(style="position:relative;left:12px;")
+				.grid_5
+					.project item#1 [280x208]
+				.grid_5
+					.project item#2 [280x208]
+				.grid_5
+					.project item#3 [280x208]
+			.grid_16(style="top:16px;position:relative;left:12px;")
+				.grid_5
+					.project item#4 [280x208]
+				.grid_5 
+					.project item#5 [280x208]
+				.grid_5
+					.project item#6 [280x208]
 
 			

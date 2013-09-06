@@ -50,6 +50,13 @@ app.get('/projects', function(req, res) {
     });
 });
 
+app.get('/projects/alexandraastor', function(req, res) {
+    res.render('projects/alexandraastor.jade', { locals: {
+        title: 'Projects'
+    }
+    });
+});
+
 app.get('/shop', function(req, res) {
     res.render('shop.jade', { locals: {
         title: 'Shop'

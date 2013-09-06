@@ -1,7 +1,10 @@
 body {
-  background: #black;
   height: auto;
+	position:relative;
+	margin-bottom:20px;
+	top:0px;
 }
+
 
 a {
   text-decoration: none;
@@ -9,7 +12,7 @@ a {
 }
 
 a:hover {
-  color:white;
+  color:#C0C0C0;
 	-webkit-transition: color .30s ease;
   -moz-transition: color .30s ease;
   -ms-transition: color .30s ease;
@@ -18,7 +21,7 @@ a:hover {
 }
 
 h1 {
-  font: 52px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
 		
 }
 
@@ -28,7 +31,6 @@ h2 {
 
 p {
   padding: 10px 0;
-  text-align: left;
 }
 
 .container_12,
@@ -37,21 +39,9 @@ p {
   background-color: #color: #black;
   background-repeat: repeat-y;
   margin-bottom:10%;
-	margin-top:3%;
-	font: 52px "Lucida Grande", Helvetica, Arial, sans-serif;
-
-}
-
-.container_12 {
-  background-image: url(../img/12_col.gif);
-}
-
-.container_16 {
-  background-image: url(../img/16_col.gif);
-}
-
-.container_24 {
-  background-image: url(../img/24_col.gif);
+	margin-top:0%;
+	font-family:'Josefin Sans', sans-serif;
+	font-size:52px;
 }
 
 .mainimage{
@@ -75,27 +65,18 @@ p {
 .welcome{
 	height:480;
 	width:720;
-	text-align:left;
+	position:relative;
+	top:20px;
+	
+	
 }
 
 .welcometext{
-	position:absolute;
 	z-index=100;
-	text-align:left;
-	opacity:0;
-	margin-top:10px;
-	margin-left:20px;
-}
-
-.comingsoon{
-	position:absolute;
-  margin-top:25%;
-	z-index=100;
-  font: 52px "Lucida Grande", Helvetica, Arial, sans-serif;
-	text-align:left;
-	opacity:0;
+	text-align:center;
 	margin-top:15px;
-	margin-left:20px;
+	margin-left:33%;
+	width:400px;
 }
 
 .welcomeimage{
@@ -107,12 +88,12 @@ p {
 .welcome:hover img{
 	
 	filter: alpha(opacity=40);
-  opacity: .4;
-  -webkit-transition: opacity .30s ease;
-  -moz-transition: opactiy .30s ease;
-  -ms-transition: opacity .30s ease;
-  -o-transition: opacity .30s ease;
-  transition: opacity .30s ease;
+  box-shadow:0px 0px 50px gray;
+  -webkit-transition: box-shadow .50s ease;
+  -moz-transition: box-shadow .50s ease;
+  -ms-transition: box-shadow .50s ease;
+  -o-transition: box-shadow .50s ease;
+  transition: box-shadow .50s ease;
 		
 }
 .welcome:hover .welcometext{
@@ -151,7 +132,7 @@ p {
 
 .homeheader{
 	text-align:left;
-	top:10px;
+	top:0px;
 	left:20px;
 	position:relative;
 	
@@ -160,6 +141,8 @@ p {
 .homedesc{
 	position:relative;
 	top:0px;
+	line-height:0px;
+	height:25px;
 	left:20px;
 	font-size:70%;
 }
@@ -168,11 +151,12 @@ p {
 
 .nav{
 	height:128px;
-	width:720px;
+	width:920px;
 	overflow:hidden;
 	margin-top:5px;
 	border:black solid 4px;
 	height:152px;
+	left:12px
 	
 }
 
@@ -195,7 +179,7 @@ p {
 }
 
 .nav:hover .navtext{
-	color:white;
+	color:#C0C0C0;
 	-webkit-transition: color .30s ease;
   -moz-transition: color .30s ease;
   -ms-transition: color .30s ease;
@@ -238,6 +222,7 @@ p {
 	border:4px solid black;
 	position:relative;
 	top:15px;	
+	left:20px;
 }
 
 .biotext{
@@ -282,7 +267,7 @@ p {
 }
 
 .project:hover{
-  border: 4px solid white;
+  border: 4px solid #C0C0C0;
   -webkit-transition: border .30s ease;
   -moz-transition: border .30s ease;
   -ms-transition: border .30s ease;
@@ -291,7 +276,7 @@ p {
 	
 }
 .project:hover{
-  color: white;
+  color:#C0C0C0;
   -webkit-transition: border .30s ease;
   -moz-transition: border .30s ease;
   -ms-transition: border .30s ease;
@@ -299,3 +284,289 @@ p {
   transition: white .30s ease;
 	
 }
+
+/*----------FOR PROJECT INDIVIDUAL PAGE---------------*/
+
+.projimg{
+	height:400px;
+	width:inheret;	
+	border:4px solid black;
+	position:relative;
+	top:15px;	
+	font-size:75%;
+	padding-left:5px;
+}
+
+.projimg:hover{
+  border: 4px solid #C0C0C0;
+  -webkit-transition: border .30s ease;
+  -moz-transition: border .30s ease;
+  -ms-transition: border .30s ease;
+  -o-transition: border .30s ease;
+  transition: border .30s ease;
+	
+}
+.projimg:hover{
+  color:#C0C0C0;
+  -webkit-transition: border .30s ease;
+  -moz-transition: border .30s ease;
+  -ms-transition: border .30s ease;
+  -o-transition: border .30s ease;
+  transition: white .30s ease;
+	
+}
+
+/*-----------THIS IS FOR PROJECT GALLERY---------------*/
+
+::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+
+/*=================================================
+	Main Styles
+==================================================*/
+
+#content-slider {
+font-family: arial;
+width: 900px;
+margin: 0 auto;
+margin-top: 100px;
+}
+
+#content2 {
+overflow: hidden;
+width: 840px;
+height: 640px;
+-webkit-box-shadow: 0px 0px 50px 10px #c9c9c9;
+-moz-box-shadow: 0px 0px 50px 10px #c9c9c9;
+box-shadow: 0px 0px 50px 10px #c9c9c9;
+}
+
+#content-inner {
+width:10000px;
+height: 480px;
+}
+
+.page {
+width: 840px;
+height: 640px;
+float: left;
+}
+
+/*================================================
+	Styling the targets.  There are 6 nested divs -
+	each div corresponds to a page.  6 pages = 
+	6 divs.
+================================================*/
+#content-inner-1:target #content-inner {
+-webkit-transition: all 400ms ease;
+-moz-transition: all 400ms ease;
+-o-transition: all 400ms ease;
+transition: all 400ms ease;
+margin-left: 0px;
+}
+
+#content-inner-2:target #content-inner {
+-webkit-transition: all 400ms ease;
+-moz-transition: all 400ms ease;
+-o-transition: all 400ms ease;
+transition: all 400ms ease;
+margin-left: -640px;
+}
+
+#content-inner-3:target #content-inner {
+-webkit-transition: all 400ms ease;
+-moz-transition: all 400ms ease;
+-o-transition: all 400ms ease;
+transition: all 400ms ease;
+margin-left: -1280px;
+}
+
+#content-inner-4:target #content-inner {
+-webkit-transition: all 400ms ease;
+-moz-transition: all 400ms ease;
+-o-transition: all 400ms ease;
+transition: all 400ms ease;
+margin-left: -1920px;
+}
+
+#content-inner-5:target #content-inner {
+-webkit-transition: all 400ms ease;
+-moz-transition: all 400ms ease;
+-o-transition: all 400ms ease;
+transition: all 400ms ease;
+margin-left: -2560px;
+}
+
+#content-inner-6:target #content-inner {
+-webkit-transition: all 400ms ease;
+-moz-transition: all 400ms ease;
+-o-transition: all 400ms ease;
+transition: all 400ms ease;
+margin-left: -3200px;
+}
+
+
+/*=======================================
+	Generic styling here.
+========================================*/
+
+.page-info {
+	height: 90px;
+	background-color: rgba(99, 99, 99, 0.6);
+	position: relative;
+	margin-top: px;
+	bottom: 103px;
+	width:480px;
+	color: #dedede;
+	padding-left: 20px;
+	padding-top: 10px;
+}
+
+.page-info h2 {
+	font-size: 21px;
+	margin-bottom: 10px;
+	margin-top: 0px;
+	color: #fafafa;
+}
+
+.page-text {
+	font-size: 15px;
+}
+
+#nav2 {
+	list-style-type: none;
+	width: 156px;
+	height: 16px;
+	margin: 0 auto;
+	margin-top: 20px;
+	padding: 0;
+}
+
+.button {
+	float: left;
+	background: #bababa;
+	width: 16px;
+	height: 16px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.button:hover {
+	-webkit-box-shadow: inset 0px 0px 2px 2px #d4d4d4;
+	-moz-box-shadow: inset 0px 0px 2px 2px #d4d4d4;
+	box-shadow: inset 0px 0px 2px 2px #d4d4d4;
+}
+
+.button:active {
+	-webkit-box-shadow: inset 0px 0px 2px 2px #7a7a7a;
+	-moz-box-shadow: inset 0px 0px 2px 2px #7a7a7a;
+	box-shadow: inset 0px 0px 2px 2px #7a7a7a;
+}
+
+.button a {
+	display: block;
+	width: 16px;
+	height: 16px;
+}
+
+img.icon{
+    height:25px; /* you can use % */
+    width: 25px;
+		top:0px;
+		padding-bottom:100px;
+}
+
+img.flip {
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+}
+
+
+  <!-- SlidesJS Required: These styles are required if you'd like a responsive slideshow -->
+
+    /* Prevent the slideshow from flashing on load */
+#slides {
+	display:none;
+}
+
+i{
+	border:1px black solid;	
+}
+
+
+.container {
+   padding-left: 32px;
+}
+
+
+    #slides {
+      display: none
+    }
+
+    #slides .slidesjs-navigation {
+      margin-top:0px;
+    }
+
+    #slides .slidesjs-previous{
+      margin-right: 5px;
+      float: left;
+    }
+
+    #slides .slidesjs-next {
+      margin-right: 5px;
+			margin-top:0px;
+      float: left;
+    }
+
+    .slidesjs-pagination {
+      margin: 6px 0 0;
+      float: right;
+      list-style: none;
+    }
+
+    .slidesjs-pagination li {
+      float: left;
+      margin: 0 1px;
+    }
+
+    .slidesjs-pagination li a {
+      display: block;
+      width: 13px;
+      height: 0;
+			padding-top:13px;
+      background-image: url(/images/pagination.png);
+      background-position: 0 0;
+      float: left;
+      overflow: hidden;
+    }
+
+    .slidesjs-pagination li a.active,
+    .slidesjs-pagination li a:hover.active {
+      background-position: 0 -13px
+    }
+
+    .slidesjs-pagination li a:hover {
+      background-position: 0 -26px
+    }
+
+    #slides a:link,
+    #slides a:visited {
+      color: #333
+    }
+
+    #slides a:hover,
+    #slides a:active {
+      color: #9e2020
+    }
+
+    .navbar {
+      overflow: hidden
+    }
+

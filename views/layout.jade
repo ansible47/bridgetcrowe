@@ -1,5 +1,78 @@
-	script.
+doctype 5
+html(lang="en")
+	head
+		title= "BridgetCroweWebsite"
+		link(rel='stylesheet', href='/stylesheets/960_16_col.css')
+		link(rel='stylesheet', href='/stylesheets/main.css')
+		link(rel='stylesheet', href='/stylesheets/reset.css')
+		link(rel='stylesheet', href='/stylesheets/text.css')
+		script(src='/javascripts/jquery-1.4.1.js')
+		script(src='/javascripts/scripts.js')
+		link(href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css')
+		script.
 			$(document).ready(function(){
 			$("body").css("opacity", "0.1");
 			$("body").fadeTo(1000, 1).show();
 			});
+	.container_16
+		body
+			.grid_12(style="line-height=0px;")
+					a(href="/home")
+						.homeheader Alexandra Astor
+						.homedesc(style="top:3px;") bridget crowe x				
+			#content-slider(style="position:relative;top:20px;")
+				ul#nav2
+					li#button1.button
+						a(href='#content-inner-1')
+					li#button2.button
+						a(href='#content-inner-2')
+					li#button3.button
+						a(href='#content-inner-3')
+					li#button4.button
+						a(href='#content-inner-4')
+					li#button5.button
+						a(href='#content-inner-5')
+					li#button6.button
+						a(href='#content-inner-6')
+				#content2
+					#content-inner-1
+						#content-inner-2
+							#content-inner-3
+								#content-inner-4
+									#content-inner-5
+										#content-inner-6
+											#content-inner
+												#page1.page
+													img.resize(src='/images/crowtest.jpg', alt='test1', title='test1')
+													#info1.page-info
+														h2 Page 1
+														.page-text Lorem ipsum dolor sit amet, consectur whatever blah.
+												#page2.page
+													img.resize(src='/images/homeimage.jpg', alt='test2', title='test2')
+													#info2.page-info
+														h2 Page 2
+														.page-text Lorem ipsum dolor sit amet, consectur whatever blah.
+												#page3.page
+													img.resize(src='/images/homeimage2.jpg', alt='test3', title='test3')
+														#info3.page-info
+														h2 Page 3
+														.page-text Lorem ipsum dolor sit amet, consectur whatever blah.
+												#page4.page
+													img.resize(src='images/homeimage.jpg', alt='test4', title='test4')
+													#info4.page-info
+														h2 Page 4
+														.page-text Lorem ipsum dolor sit amet, consectur whatever blah.
+												#page5.page
+													img.resize(src='images/crowtest.jpg', alt='test5', title='test5')
+													#info5.page-info
+														h2 Page 5
+														.page-text Lorem ipsum dolor sit amet, consectur whatever blah.
+												#page6.page
+													img.resize(src='images/homeimage2.jpg', alt='test6', title='test6')
+													#info6.page-info
+														h2 Page 6
+														.page-text Lorem ipsum dolor sit amet, consectur whatever blah.
+
+
+
+			

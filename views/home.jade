@@ -1,21 +1,6 @@
-doctype 5
-html(lang="en")
-	head
-		title= "BridgetCroweWebsite"
-		link(rel='stylesheet', href='/stylesheets/960_16_col.css')
-		link(rel='stylesheet', href='/stylesheets/main.css')
-		link(rel='stylesheet', href='/stylesheets/reset.css')
-		link(rel='stylesheet', href='/stylesheets/text.css')
-		script(src='/javascripts/jquery-1.4.1.js')
-		script(src='/javascripts/scripts.js')
-		link(href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css')
-		script.
-			$(document).ready(function(){
-			$("body").css("opacity", "0.1");
-			$("body").fadeTo(1000, 1).show();
-			});
-	.container_16
-		body
+extends layout
+
+block content
 			.grid_16(style="line-height=0px;")
 					a(href="/home")
 						.homeheader bridget crowe

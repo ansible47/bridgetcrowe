@@ -1,0 +1,31 @@
+doctype 5
+html(lang="en")
+	head
+		title='Bridget Crowe'
+		link(rel='stylesheet', href='/stylesheets/960_16_col.css')
+		link(rel='stylesheet', href='/stylesheets/main.css')
+		link(rel='stylesheet', href='/stylesheets/reset.css')
+		link(rel='stylesheet', href='/stylesheets/text.css')
+		script(src='/javascripts/jquery-1.4.1.js')
+		script(src='/javascripts/scripts.js')
+		link(href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css')
+		block extrahead
+	.container_16
+		body
+			block content
+									
+						
+			// SlidesJS Required: Link to jQuery
+			script(src='http://code.jquery.com/jquery-1.9.1.min.js')
+			// End SlidesJS Required
+			// SlidesJS Required: Link to jquery.slides.js
+			script(src='/javascripts/jquery.slides.min.js')
+			// End SlidesJS Required
+			// SlidesJS Required: Initialize SlidesJS with a jQuery doc ready
+			script
+				$(function() {
+				$('#slides').slidesjs({
+				width: 960,
+				height: 640,
+				});
+				});

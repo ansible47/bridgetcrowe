@@ -516,6 +516,7 @@ i{
 
     #slides .slidesjs-previous{
       margin-right: 5px;
+			margin-bottom:20px;
       float: left;
     }
 

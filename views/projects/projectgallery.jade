@@ -1,0 +1,46 @@
+extends projectlayout
+
+block extrahead
+		meta(name="viewport" content="width=device-width")
+		script(src='/javascripts/jquery.slides.min.js')
+		script(src='/javascripts/scripts.js')
+		
+		
+
+block content
+
+			.grid_12(style="line-height=0px;")
+					a(href="/projects")
+						.homeheader #{pageData.title}
+						
+						.homedesc(style="top:5px;") bridget crowe	[960x640] 
+					.homedesc(style="top:20px;font-size:50%")
+						a(href="/projects/" + pageData.link + "/")	
+							|Page 1 | 
+						if pageData.files.length > pageData.pagelen
+							a(href="/projects/" + pageData.link + "/2") 
+								|Page 2 |
+						a(href="") 
+							|#{pageData.files.length} total
+			.clear
+	
+					
+				
+			
+			.container(style="margin-top:20px;")
+				#slides
+					
+					//for file in pageData.files
+					//		img(src=pageData.path+file, alt="pic")
+
+					each x in [0+pageData.page*pageData.pagelen,1+pageData.page*pageData.pagelen,2+pageData.page*pageData.pagelen,3+pageData.page*pageData.pagelen,4+pageData.page*pageData.pagelen,5+pageData.page*pageData.pagelen]
+						if x < pageData.files.length
+							img(src=pageData.path+pageData.files[x], alt="pic") 
+					
+					a.slidesjs-previous.slidesjs-navigation(href='#')
+						i.icon-chevron-left.icon-large
+							img.icon(src="/images/left-arrow.png")
+					a.slidesjs-next.slidesjs-navigation(href='#')
+						i.icon-chevron-right.icon-large
+							img.icon.flip(src="/images/left-arrow.png")
+	

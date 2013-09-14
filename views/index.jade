@@ -1,5 +1,12 @@
 extends layout
 
+block extrahead
+			script.
+				$(document).ready(function() {   
+				$("body").css("opacity", "0.1");
+				$("body").delay(200).animate({ opacity: 1 }, 200);
+				});
+
 block content
 			.welcome
 				.grid_16

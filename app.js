@@ -29,6 +29,8 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+
+
 app.get('/', routes.index);
 app.get('/home', function(req, res) {
     res.render('home.jade', { locals: {
@@ -57,11 +59,10 @@ app.get('/projects/alexandraastor', function(req, res){
 		res.render('projects/projectgallery.jade', {
 			pageData: {
 				title: 'Alexandra Astor',
-				path: '/images/gallery/alexandraastor/',
-				files	: data,
+				files	: appendArray('/images/gallery/alexandraastor/', data),
 				link: 'alexandraastor',
 				page : 0,
-				pagelen: 6
+				pagelen: 6,
 			}
 		});
 	});
@@ -72,8 +73,7 @@ app.get('/projects/alexandraastor/2', function(req, res){
 		res.render('projects/projectgallery.jade', {
 			pageData: {
 				title: 'Alexandra Astor',
-				path: '/images/gallery/alexandraastor/',
-				files	: data,
+				files	: appendArray('/images/gallery/alexandraastor/', data),
 				page : 1,
 				link: 'alexandraastor',
 				pagelen: 6
@@ -87,8 +87,7 @@ app.get('/projects/cauleensmith', function(req, res){
 		res.render('projects/projectgallery.jade', {
 			pageData: {
 				title: 'Cauleen Smith',
-				path: '/images/gallery/cauleensmith/',
-				files	: data,
+				files	: appendArray('/images/gallery/cauleensmith/', data),
 				link: 'cauleensmith',
 				page : 0,
 				pagelen: 6
@@ -102,8 +101,7 @@ app.get('/projects/cauleensmith/2', function(req, res){
 		res.render('projects/projectgallery.jade', {
 			pageData: {
 				title: 'Cauleen Smith',
-				path: '/images/gallery/cauleensmith/',
-				files	: data,
+				files	: appendArray('/images/gallery/cauleensmith/', data),
 				page : 1,
 				link: 'cauleensmith',
 				pagelen: 6
@@ -118,8 +116,7 @@ app.get('/projects/margauxfranco/fall2012', function(req, res){
 		res.render('projects/projectgallery.jade', {
 			pageData: {
 				title: 'Margaux Franco Fall 2012',
-				path: '/images/gallery/margauxfranco/fall2012/',
-				files	: data,
+				files	: appendArray('/images/gallery/margauxfranco/fall2012/', data),
 				link: 'margauxfranco/fall2012',
 				page : 0,
 				pagelen: 6
@@ -133,8 +130,7 @@ app.get('/projects/margauxfranco/spring2013', function(req, res){
 		res.render('projects/projectgallery.jade', {
 			pageData: {
 				title: 'Margaux Franco Spring 2013',
-				path: '/images/gallery/margauxfranco/spring2013/',
-				files	: data,
+				files	: appendArray('/images/gallery/margauxfranco/spring2013/', data),
 				link: 'margauxfranco/spring2013',
 				page : 0,
 				pagelen: 6
@@ -149,8 +145,7 @@ app.get('/projects/margauxfranco/spring2013/2', function(req, res){
 		res.render('projects/projectgallery.jade', {
 			pageData: {
 				title: 'Margaux Franco Spring 2013',
-				path: '/images/gallery/margauxfranco/spring2013/',
-				files	: data,
+				files	: appendArray('/images/gallery/margauxfranco/spring2013/', data),
 				link: 'margauxfranco/spring2013',
 				page : 1,
 				pagelen: 6
@@ -163,9 +158,8 @@ app.get('/projects/jessicamazza', function(req, res){
 	fs.readdir('public/images/gallery/jessicamazza', function(err, data){
 		res.render('projects/projectgallery.jade', {
 			pageData: {
-				title: 'Jessica Mazza',
-				path: '/images/gallery/jessicamazza/',
-				files	: data,
+				title: 'Jessica Mazza',				
+				files	: appendArray('/images/gallery/jessicamazza/', data),
 				page : 0,
 				pagelen: 6,
 				link: 'jessicamazza'
@@ -180,9 +174,8 @@ app.get('/projects/jessicamazza/2', function(req, res){
 		res.render('projects/projectgallery.jade', {
 			pageData: {
 				title: 'Jessica Mazza',
-				path: '/images/gallery/jessicamazza/',
+				files	: appendArray('/images/gallery/jessicamazza/', data),
 				link: 'jessicamazza',
-				files	: data,
 				page : 1,
 				pagelen: 6,
 			}
@@ -208,9 +201,17 @@ app.use(function(req, res, next) {
 
 app.use(express.static(__dirname + '/public'));
 
+function appendArray(path, input){
+	var str = input.toString();
+	var tempArray = str.split(",");
+	for ( var i = 0; i < tempArray.length; i++ ) {
+			tempArray[i] = path + tempArray[i];
+	}
+	str = tempArray.join(",");
+	return str
+}
 
-
-
+		
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });

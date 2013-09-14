@@ -6,26 +6,35 @@ html(lang="en")
 		link(rel='stylesheet', href='/stylesheets/main.css')
 		link(rel='stylesheet', href='/stylesheets/reset.css')
 		link(rel='stylesheet', href='/stylesheets/text.css')
-		script(src='/javascripts/jquery-1.4.1.js')
-		script(src='/javascripts/scripts.js')
+		link(rel="stylesheet", href="/stylesheets/smoothDivScroll.css")
+		script(src='/javascripts/jquery-1.10.2.js')
+		
+		script(src='/javascripts/jquery-ui-1.8.23.custom.min.js')
+		script(src='/javascripts/jquery.mousewheel.min.js')
+		script(src='/javascripts/jquery.kinetic.js')
+		script(src='/javascripts/jquery.smoothDivScroll-1.3.js')
+		//script(src='/javascripts/scripts.js')
 		link(href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css')
-		block extrahead
-	.container_16
-		body
+		block script
+
+	body	
+		.container_16
 			block content
 									
 						
 			// SlidesJS Required: Link to jQuery
-			script(src='http://code.jquery.com/jquery-1.9.1.min.js')
+
 			// End SlidesJS Required
 			// SlidesJS Required: Link to jquery.slides.js
-			script(src='/javascripts/jquery.slides.min.js')
 			// End SlidesJS Required
 			// SlidesJS Required: Initialize SlidesJS with a jQuery doc ready
-			script
-				$(function() {
-				$('#slides').slidesjs({
-				width: 960,
-				height: 640,
+			script.
+
+			
+block script
+		script.
+			$(document).ready(function() {
+				$("body").css("opacity", "0.1");
+				$("body").delay(200).animate({ opacity: 1 }, 200);
 				});
-				});
+

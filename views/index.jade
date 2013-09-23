@@ -1,22 +1,11 @@
 extends layout
 
-block extrahead
-			script.
-				$(document).ready(function() {   
-				$("body").css("opacity", "0.1");
-				$("body").delay(200).animate({ opacity: 1 }, 200);
-				});
+block header
+	a(href="/home")
+		img.welcome.hoverBorder(src="/images/homeimage2.jpg")
 
 block content
-			.welcome
-				.grid_16
-					.welcomeimage
-						a(href="/home")
-							img(src='/images/homeimage2.jpg', alt='The website of Bridget Crowe' style='margin-left: auto;margin-right: auto')
-				.clear
-				.grid_14
-					a(href="/home")
-						.welcometext(style="line-height:18px;text-align:center;")
-							p bridget crowe
-							p(style="font-size:75%;") fiber artist/textile designer
-							p(style="font-size:50%;") [click to continue]
+	a(href="/home")
+		h1.centered Bridget Crowe
+		h2.centered fiber artist/textile designer
+					

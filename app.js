@@ -9,8 +9,12 @@ var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
 var fs = require('fs');
+var stylus = require('stylus');
+var fluidity = require('fluidity');
+
 
 var app = express();
+
 
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -24,6 +28,8 @@ app.use(app.router);
 app.use(require('stylus').middleware(__dirname + '/public'));
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
@@ -35,6 +41,14 @@ app.get('/', routes.index);
 app.get('/home', function(req, res) {
     res.render('home.jade', { locals: {
         title: 'Home'
+    }
+    });
+});
+
+app.get('/test', routes.index);
+app.get('/test', function(req, res) {
+    res.render('test.jade', { locals: {
+        title: 'Test'
     }
     });
 });
@@ -214,4 +228,20 @@ function appendArray(path, input){
 		
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
+});
+
+ 
+app.configure(function () {
+  // ... your middleware here
+  app.use(stylus.middleware({
+    src: __dirname + '/views', // .styl files are located in `views/stylesheets`
+    dest: __dirname + '/public', // .styl resources are compiled `/stylesheets/*.css`
+    compile: function (str, path) { // optional, but recommended
+      stylus(str)
+      .set('filename', path)
+      .set('compress', true)
+			.use(fluidity());
+    }
+  }));
+  app.use(express.static(__dirname + '/public'));
 });

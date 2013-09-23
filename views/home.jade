@@ -1,34 +1,26 @@
 extends layout
 
+block header
+	a(href="/home")
+		h1 Bridget Crowe
+		h2 fiber artist/textile designer
+
 block content
-			.grid_16(style="line-height=0px;")
-					a(href="/home")
-						.homeheader Bridget Crowe
-						.homedesc fiber artist/textile designer
-			.clear
-			.grid_14(style="left:20px;position:relative;")
-				a(href="/projects")
-					.nav
-						.navtext 
-							|projects<br/>
-							|[928x160]
-						img(src='', alt='')
-			.clear
-			.grid_14(style="left:20px;position:relative;")
-				a(href="/shop")
-					.nav
-						.navtext 
-							|shop<br/>
-							|[928x160]
-						img(src='', alt='')
-			.clear
-			.grid_14(style="left:20px;position:relative;")
-				a(href="/contact")
-					.nav					
-						.navtext 
-							|contact <br/>
-							|[928x160]
-						img(src='', alt='' )
+		a(href="/projects")
+			nav 
+				h2.centered projects
+				// [928x160]
+		a(href="/shop")
+			nav
+				h2.centered shop
+				//[928x160]
+		a(href="/contact")
+			nav					
+				h2.centered contact
+				//[928x160]
+
+					
+
 						
 					
 					

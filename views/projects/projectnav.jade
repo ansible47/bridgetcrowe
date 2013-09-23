@@ -27,3 +27,11 @@ block content
 				a(href="/projects/margauxfranco/fall2012")
 					.grid_5
 						.project Margaux Franco Spring 2012
+
+
+block script
+		script.
+			$(document).ready(function() {
+				$("body").css("opacity", "0.1");
+				$("body").delay(200).animate({ opacity: 1 }, 200);
+				});

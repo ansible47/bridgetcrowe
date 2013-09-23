@@ -1,24 +1,27 @@
 extends layout
 
-block content
-			.grid_12(style="line-height=0px;")
-					a(href="/home")
-						.homeheader Shop
-						.homedesc(style="top:3px;") bridget crowe				
-			.clear
-			.grid_16(style="position:relative;left:12px;")
-				.grid_5
-					.project item#1 [280x208]
-				.grid_5
-					.project item#2 [280x208]
-				.grid_5
-					.project item#3 [280x208]
-			.grid_16(style="top:16px;position:relative;left:12px;")
-				.grid_5
-					.project item#4 [280x208]
-				.grid_5 
-					.project item#5 [280x208]
-				.grid_5
-					.project item#6 [280x208]
+block header
+	a(href="/home" style="margin-top:0%;line-height:0px;")
+		h1 Shop
+		h2 home
 
-			
+block content
+	.content	
+		items
+			a(href="/projects")
+				.item item#1
+			a(href="/shop")
+				.item item#2
+			a(href="/shop")
+				.item item#3
+			a(href="/shop")
+				.item item#4
+			a(href="/shop")
+				.item item#5
+			a(href="/shop")
+				.item item#6
+			a(href="/shop")
+				.item item#7
+			a(href="/shop")
+				.item item#8
+			|<br/>
